@@ -1,4 +1,4 @@
-import { LinksFunction, LoaderFunction, json } from "@remix-run/node";
+import { LinksFunction, json, redirect } from "@remix-run/node";
 import {
   Form,
   Links,
@@ -12,21 +12,26 @@ import {
 } from "@remix-run/react";
 import favIconHref from "~/assets/favicon.svg";
 import stylesheetHref from "~/app.css";
-import { ContactRecord, getContacts } from "./data";
+import { createEmptyContact, getContacts } from "./data";
 
 export const links: LinksFunction = () => [
   { rel: "icon", href: favIconHref },
   { rel: "stylesheet", href: stylesheetHref },
 ];
 
-export const loader: LoaderFunction = async () => {
+export const action = async () => {
+  const contact = await createEmptyContact();
+  return redirect(`/contacts/${contact.id}/edit`);
+};
+
+export const loader = async () => {
   const contacts = await getContacts();
-  return await json({ contacts });
+  return json({ contacts });
 };
 
 export default function App() {
   const { contacts } = useLoaderData<typeof loader>();
-  console.log(contacts);
+
   return (
     <html>
       <head lang="en">
@@ -56,7 +61,7 @@ export default function App() {
           <nav>
             {contacts.length ? (
               <ul>
-                {contacts.map((contact: ContactRecord) => (
+                {contacts.map((contact) => (
                   <li key={contact.id}>
                     <NavLink to={`contacts/${contact.id}`}>
                       {contact.first || contact.last ? (
