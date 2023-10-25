@@ -1,3 +1,4 @@
+import { LinksFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -5,6 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import favIconHref from "~/assets/favicon.svg";
+import stylesheetHref from "~/app.css";
+
+export const links: LinksFunction = () => [
+  { rel: "icon", href: favIconHref },
+  { rel: "stylesheet", href: stylesheetHref },
+];
 
 export default function App() {
   return (
