@@ -98,10 +98,38 @@ export async function deleteContact(id: string) {
 [
   {
     avatar:
-      "https://sessionize.com/image/124e-400o400o2-wHVdAuNaxi8KJrgtN3ZKci.jpg",
-    first: "Shruti",
-    last: "Kapoor",
-    twitter: "@shrutikapoor08",
+      "https://pbs.twimg.com/profile_images/1685537765784698881/-psNwo1k_400x400.jpg",
+    first: "Piyash Bin",
+    last: "Ahmed",
+    twitter: "@officialpiyash",
+  },
+  {
+    avatar:
+      "https://pbs.twimg.com/profile_images/1617055623170129921/wty3vnHP_400x400.jpg",
+    first: "Faisal Mahmud",
+    last: "Anik",
+    twitter: "@bandaFaisal",
+  },
+  {
+    avatar:
+      "https://media.licdn.com/dms/image/C4D03AQHIevV9191RFw/profile-displayphoto-shrink_800_800/0/1658980792730?e=1703721600&v=beta&t=WoqAheXhHNXhpcgKF19zETf1mhlMItaewwrNVWkhRk4",
+    first: "Rahul",
+    last: "B.",
+    twitter: "@rahulB",
+  },
+  {
+    avatar:
+      "https://media.licdn.com/dms/image/C4D03AQHIevV9191RFw/profile-displayphoto-shrink_800_800/0/1658980792730?e=1703721600&v=beta&t=WoqAheXhHNXhpcgKF19zETf1mhlMItaewwrNVWkhRk4",
+    first: "Rahul",
+    last: "B.",
+    twitter: "@rahulB",
+  },
+  {
+    avatar:
+      "https://instagram.fdac31-1.fna.fbcdn.net/v/t51.2885-19/309076820_5429271623825354_7727089339531831254_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fdac31-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=plUBjcR9bL0AX-hf2gU&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfAEtriHZgzyFDSIpFBH8P9N1lxn4Qh8EUEKxAgq1wre2w&oe=653FA557&_nc_sid=8b3546",
+    first: "Newyaz",
+    last: "Sharif.",
+    twitter: "@newas.sharif",
   },
   {
     avatar:
