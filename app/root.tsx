@@ -35,8 +35,8 @@ export default function App() {
   const navigation = useNavigation();
 
   return (
-    <html>
-      <head lang="en">
+    <html lang="en">
+      <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
@@ -93,7 +93,7 @@ export default function App() {
 
         <div
           className={navigation.state === "loading" ? "loading" : ""}
-          id="details"
+          id="detail"
         >
           <Outlet />
         </div>
