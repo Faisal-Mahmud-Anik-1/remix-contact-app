@@ -9,6 +9,7 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
+  useNavigation,
 } from "@remix-run/react";
 import favIconHref from "~/assets/favicon.svg";
 import stylesheetHref from "~/app.css";
@@ -31,6 +32,7 @@ export const loader = async () => {
 
 export default function App() {
   const { contacts } = useLoaderData<typeof loader>();
+  const navigation = useNavigation();
 
   return (
     <html>
@@ -63,7 +65,12 @@ export default function App() {
               <ul>
                 {contacts.map((contact) => (
                   <li key={contact.id}>
-                    <NavLink to={`contacts/${contact.id}`}>
+                    <NavLink
+                      className={({ isActive, isPending }) =>
+                        isActive ? "active" : isPending ? "pending" : ""
+                      }
+                      to={`contacts/${contact.id}`}
+                    >
                       {contact.first || contact.last ? (
                         <>
                           {contact.first} {contact.last}
@@ -84,7 +91,10 @@ export default function App() {
           </nav>
         </div>
 
-        <div id="details">
+        <div
+          className={navigation.state === "loading" ? "loading" : ""}
+          id="details"
+        >
           <Outlet />
         </div>
 
