@@ -64,7 +64,7 @@ export default function App() {
       </head>
       <body>
         <div id="sidebar">
-          <h1>Remix Contacts</h1>
+          <h1>MC Savages Contacts</h1>
           <div>
             <Form
               id="search-form"
