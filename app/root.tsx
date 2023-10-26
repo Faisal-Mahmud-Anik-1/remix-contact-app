@@ -65,6 +65,7 @@ export default function App() {
       <body>
         <div id="sidebar">
           <h1>MC Savages Contacts</h1>
+          <p> Made by 💙 Faisal Vaiya</p>
           <div>
             <Form
               id="search-form"
